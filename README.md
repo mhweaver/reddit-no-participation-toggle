@@ -1,6 +1,6 @@
 # Reddit No Participation Toggle
 
-[Reddit No Participation Toggle](https://chrome.google.com/webstore/detail/mjpnnnikhngjjoapjdcdfepkenphaobi) is a Google Chrome extension that allows you to disable the new "No Participation" feature many subreddits have recently implemented.
+[Reddit No Participation Toggle](https://chrome.google.com/webstore/detail/reddit-no-participation-t/kbggmcnpaopajfmhojfogfcbgdmnbann) is a Google Chrome extension that allows you to disable the new "No Participation" feature many subreddits have recently implemented.
 
 This extension adds a "[NP on/off]" link to all reddit pages (in the upper-
 right, next to the "preferences" link to allow you to quickly toggle NP). When NP
