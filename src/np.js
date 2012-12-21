@@ -2,31 +2,27 @@ if (localStorage['enableNP'] == undefined) {
   localStorage['enableNP'] = true
 }
 
-document.onreadystatechange = function(e) {
-  if (document.readyState != "complete") return
-  var enableNPText = (localStorage['enableNP'] == "true") ? 'on' : 'off'
-  enableDisable()
+var enableNPText = (localStorage['enableNP'] == "true") ? 'on' : 'off'
+enableDisable()
  
-  var toggleLink = document.createElement("a")
-  toggleLink.href = "javascript:void(0)"
-  toggleLink.id = "toggleNP"
-  toggleLink.innerText = "[NP " + enableNPText + "]"
+var toggleLink = document.createElement("a")
+toggleLink.href = "javascript:void(0)"
+toggleLink.id = "toggleNP"
+toggleLink.innerText = "[NP " + enableNPText + "]"
   
-  var separator = document.createElement("span")
-  separator.className = "separator"
-  separator.innerText = "|"
+var separator = document.createElement("span")
+separator.className = "separator"
+separator.innerText = "|"
   
-  var preferences = document.querySelector('a.pref-lang').parentNode.parentNode
-  preferences.parentNode.insertBefore(toggleLink, preferences.nextSibling)
-  preferences.parentNode.insertBefore(separator, toggleLink)
+var preferences = document.querySelector('a.pref-lang').parentNode.parentNode preferences.parentNode.insertBefore(toggleLink, preferences.nextSibling)
+preferences.parentNode.insertBefore(separator, toggleLink)
   
     
     
-  document.querySelector('#toggleNP').addEventListener('click', function(e) {
-    toggleNP()
-    this.innerText = '[NP ' + (localStorage['enableNP'] == "true" ? 'on' : 'off') + ']'
-  }, false)
-}
+toggleLink.addEventListener('click', function(e) {
+  toggleNP()
+  this.innerText = '[NP ' + (localStorage['enableNP'] == "true" ? 'on' : 'off') + ']'
+}, false)
 
 // Warning: Since this works with NodeLists, changes will be made to the actual
 // NodeList object (as opposed to Array.map() which returns a new Array

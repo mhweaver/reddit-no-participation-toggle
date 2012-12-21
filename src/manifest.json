@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": ["http://*.reddit.com/*"],
-      "run_at": "document_start",
+      "run_at": "document_end",
       "js": ["np.js"]
     }
   ]
