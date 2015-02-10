@@ -47,9 +47,9 @@ function toggleNP() {
   enableDisable()
 }
 function disable(element) {
-  pattern = /http:\/\/[^/]*np\.reddit\.com\//i;
+  pattern = /(http:\/\/|https:\/\/)?[^/]*np\.reddit\.com\//i;
   if (element.href != undefined && element.href.match(pattern)) {
-    element.href = element.href.replace(pattern, "http://www.reddit.com/")
+    element.href = element.href.replace(pattern, "https://www.reddit.com/")
   }
 }
 function enable(element) {
@@ -63,6 +63,9 @@ function enableDisable() {
   } else {
     document.querySelectorAll("a[href^='http://np.']").map(disable)
     document.querySelectorAll("a[href^='http://www.np.']").map(disable)
+    document.querySelectorAll("a[href^='https://www.np.']").map(disable)
+    document.querySelectorAll("a[href^='https://np.']").map(disable)
+    document.querySelectorAll("a[href^='np.']").map(disable)
   }
 }
 window.addEventListener('hashchange', enableDisable)
