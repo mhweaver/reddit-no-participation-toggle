@@ -49,7 +49,7 @@ function toggleNP() {
 function disable(element) {
   pattern = /(http:\/\/|https:\/\/)?[^/]*np\.reddit\.com\//i;
   if (element.href != undefined && element.href.match(pattern)) {
-    element.href = element.href.replace(pattern, "http://www.reddit.com/")
+    element.href = element.href.replace(pattern, "https://www.reddit.com/")
   }
 }
 function enable(element) {
